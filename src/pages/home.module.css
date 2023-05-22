@@ -4,3 +4,27 @@ h1{
 p{
     color: black;
 }
+.button-div{
+    display: flex;
+    justify-content: space-between;
+    width :40%;
+    padding: 3.5rem;
+    margin:auto;
+    align-items: center;
+}
+.home-cont{
+    display: flex;
+    flex-wrap: wrap;
+    gap:4rem;
+    padding-left:8rem;
+    padding-bottom: 2rem;
+    margin-bottom: 4rem;
+}
+
+.skeleton{
+    display: flex;
+    flex-wrap: wrap;
+    gap:4rem;
+    padding-left:8rem;
+
+}
