@@ -3,7 +3,16 @@ import Button from "react-bootstrap/Button";
 import WebsiteBrand from "./websiteBrand";
 import classes from "./MainNavigation.module.css";
 import SearchIcon from "@mui/icons-material/Search";
+import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { pageActions } from "../store";
+
 const MainNavigationBar = () => {
+  const [input, setInput] = useState("");
+  const dispatch = useDispatch();
+  const handleClick = () => {
+    dispatch(pageActions.setQuery(input));
+  };
   return (
     <div>
       <WebsiteBrand />
@@ -14,8 +23,11 @@ const MainNavigationBar = () => {
             placeholder="Search"
             className="me-2"
             aria-label="Search"
+            onChange={(e) => {
+              setInput(e.target.value);
+            }}
           />
-          <Button variant="outline-success" size="sm">
+          <Button variant="outline-dark" size="sm" onClick={handleClick}>
             <SearchIcon />
           </Button>
         </Form>

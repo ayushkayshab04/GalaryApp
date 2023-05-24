@@ -2,6 +2,7 @@ import "./App.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import HomePage from "./pages/home";
 import RootLayout from "./pages/root";
+import MyPagination from "./components/pagination";
 
 const router = createBrowserRouter([
   {
@@ -12,10 +13,6 @@ const router = createBrowserRouter([
         path: "/",
         element: <HomePage />,
       },
-      // {
-      //   path: "/cart",
-      //   element
-      // },
     ],
   },
 ]);
@@ -24,6 +21,7 @@ function App() {
   return (
     <>
       <RouterProvider router={router} />
+      <MyPagination />
     </>
   );
 }
